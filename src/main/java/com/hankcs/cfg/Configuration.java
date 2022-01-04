@@ -25,6 +25,9 @@ public class Configuration {
 
     private boolean enableCustomDictionary;
 
+    //強制使用客製字典
+    private boolean enableCustomDictionaryForcing;
+
     private boolean enableTranslatedNameRecognize;
 
     private boolean enableJapaneseNameRecognize;
@@ -57,6 +60,7 @@ public class Configuration {
         this.enableIndexMode = settings.get("enable_index_mode", "false").equals("true");
         this.enableNumberQuantifierRecognize = settings.get("enable_number_quantifier_recognize", "false").equals("true");
         this.enableCustomDictionary = settings.get("enable_custom_dictionary", "true").equals("true");
+        this.enableCustomDictionaryForcing = settings.get("enable_custom_dictionary_forcing", "true").equals("true");
         this.enableTranslatedNameRecognize = settings.get("enable_translated_name_recognize", "false").equals("true");
         this.enableJapaneseNameRecognize = settings.get("enable_japanese_name_recognize", "false").equals("true");
         this.enableOrganizationRecognize = settings.get("enable_organization_recognize", "false").equals("true");
@@ -113,6 +117,15 @@ public class Configuration {
 
     public Configuration enableCustomDictionary(boolean enableCustomDictionary) {
         this.enableCustomDictionary = enableCustomDictionary;
+        return this;
+    }
+
+    public boolean isEnableCustomDictionaryForcing() {
+        return this.enableCustomDictionaryForcing;
+    }
+
+    public Configuration enableCustomDictionaryForcing(boolean enableCustomDictionaryForcing) {
+        this.enableCustomDictionaryForcing = enableCustomDictionaryForcing;
         return this;
     }
 

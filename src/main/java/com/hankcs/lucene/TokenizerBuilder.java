@@ -44,6 +44,7 @@ public class TokenizerBuilder {
         segment.enableIndexMode(configuration.isEnableIndexMode())
             .enableNumberQuantifierRecognize(configuration.isEnableNumberQuantifierRecognize())
             .enableCustomDictionary(configuration.isEnableCustomDictionary())
+            .enableCustomDictionaryForcing(configuration.isEnableCustomDictionaryForcing())
             .enableTranslatedNameRecognize(configuration.isEnableTranslatedNameRecognize())
             .enableJapaneseNameRecognize(configuration.isEnableJapaneseNameRecognize())
             .enableOrganizationRecognize(configuration.isEnableOrganizationRecognize())
