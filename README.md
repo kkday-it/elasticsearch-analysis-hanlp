@@ -1,3 +1,8 @@
+# NOTE
+使用 gradle 打包應該要用 jdk10 or jdk11
+之前嘗試使用 jdk8 & jdk17 都會失敗
+其他版本目前沒嘗試過
+
 # elasticsearch-analysis-hanlp
 HanLP Analyzer for ElasticSearch
 
